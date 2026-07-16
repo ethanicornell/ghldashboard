@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,6 +27,7 @@ body{
     display:grid;
     grid-template-columns:repeat(6,1fr);
     gap:8px;
+    align-items:start;
 }
 
 .link-box{
@@ -56,6 +58,33 @@ body{
     background:#93c5fd;
 }
 
+/* Dropdown */
+
+details{
+    width:100%;
+}
+
+summary{
+    list-style:none;
+    cursor:pointer;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+.dropdown{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    margin-top:6px;
+}
+
+.dropdown .link-box{
+    height:36px;
+    background:#eef6ff;
+}
+
 </style>
 
 </head>
@@ -64,29 +93,45 @@ body{
 
 <div class="grid">
 
-<a class="link-box" href="https://google.com" target="_blank">
-Pipeline
-</a>
+    <a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+        Pipeline
+    </a>
 
-<a class="link-box" href="https://google.com" target="_blank">
-Contacts
-</a>
+    <details>
 
-<a class="link-box" href="https://google.com" target="_blank">
-Calendar
-</a>
+        <summary class="link-box">
+            Resources ▼
+        </summary>
 
-<a class="link-box" href="https://google.com" target="_blank">
-Tasks
-</a>
+        <div class="dropdown">
 
-<a class="link-box" href="https://google.com" target="_blank">
-Pricing
-</a>
+            <a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+                Pricing
+            </a>
 
-<a class="link-box" href="https://google.com" target="_blank">
-Knowledge Base
-</a>
+            <a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+                SOPs
+            </a>
+
+        </div>
+
+    </details>
+
+    <a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+        Calendar
+    </a>
+
+    <a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+        Tasks
+    </a>
+
+    <a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+        Pricing
+    </a>
+
+    <a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+        Knowledge Base
+    </a>
 
 </div>
 
