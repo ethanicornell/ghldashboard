@@ -8,11 +8,65 @@
 
 <title>Quick Links</title>
 
+
 <!-- ========================================= -->
 <!--               CSS START                   -->
 <!-- ========================================= -->
 
 <style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    padding:4px;
+    font-family:Arial,sans-serif;
+    background:white;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:8px;
+    align-items:start;
+}
+
+
+.link-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    height:40px;
+
+    background:#dbeafe;
+    border:1px solid #000;
+    border-radius:6px;
+
+    color:#000;
+    text-decoration:none;
+
+    font-size:13px;
+    font-weight:600;
+
+    user-select:none;
+    cursor:pointer;
+}
+
+
+.link-box:hover{
+    background:#bfdbfe;
+}
+
+
+.link-box:active{
+    background:#93c5fd;
+}
+
 
 /* Dropdown */
 
@@ -20,13 +74,16 @@
     position:relative;
 }
 
+
 .dropdown-btn{
     width:100%;
-    cursor:pointer;
 }
 
+
 .dropdown-content{
+
     position:absolute;
+
     top:100%;
     left:0;
 
@@ -39,18 +96,27 @@
     margin-top:6px;
 
     z-index:999;
+
 }
+
 
 .dropdown-content .link-box{
+
     height:36px;
     background:#eef6ff;
+
 }
+
 
 .dropdown-content.show{
+
     display:flex;
+
 }
 
+
 </style>
+
 
 <!-- ========================================= -->
 <!--                CSS END                    -->
@@ -58,142 +124,186 @@
 
 </head>
 
+
 <body>
+
 
 <!-- ========================================= -->
 <!--             NAVBAR START                  -->
 <!-- ========================================= -->
 
-<div class="dropdown">
 
-    <button class="link-box dropdown-btn">
-        Go High Level ▼
-    </button>
+<div class="grid">
 
-    <div class="dropdown-content">
 
-        <a class="link-box" href="https://app.gohighlevel.com/v2/location/YeOwd8tycK9E6iuyQOTb/tasks" target="_blank" rel="noopener">
-            Tasks
-        </a>
-
-        <a class="link-box" href="https://app.gohighlevel.com/v2/location/YeOwd8tycK9E6iuyQOTb/opportunities/list" target="_blank" rel="noopener">
-            Pipelines
-        </a>
-
-        <a class="link-box" href="https://app.gohighlevel.com/v2/location/YeOwd8tycK9E6iuyQOTb/custom-menu-link/a9ad3832-80a7-4b56-88df-7303482419f4" target="_blank" rel="noopener">
-            Carrier Contacts
-        </a>
-
-    </div>
-
-</div>
-    
-    <!-- EZ Lynx -->
-    <div class="dropdown">
-
-    <button class="link-box dropdown-btn">
-        EZ Lynx ▼
-    </button>
-
-    <div class="dropdown-content">
-
-        <a class="link-box" href="https://app.gohighlevel.com/v2/location/YeOwd8tycK9E6iuyQOTb/tasks" target="_blank" rel="noopener">
-            Book
-        </a>
-
-        <a class="link-box" href="https://app.gohighlevel.com/v2/location/YeOwd8tycK9E6iuyQOTb/opportunities/list" target="_blank" rel="noopener">
-            Link2
-        </a>
-
-        <a class="link-box" href="https://app.gohighlevel.com/v2/location/YeOwd8tycK9E6iuyQOTb/custom-menu-link/a9ad3832-80a7-4b56-88df-7303482419f4" target="_blank" rel="noopener">
-            Link3
-        </a>
-
-    </div>
+<!-- Go High Level -->
 
 <div class="dropdown">
 
-    <button class="link-box dropdown-btn">
-        Outlook ▼
-    </button>
+<button type="button" class="link-box dropdown-btn">
+Go High Level ▼
+</button>
 
-    <div class="dropdown-content">
 
-        <a class="link-box" href="https://outlook.office.com/mail/inbox/id/AAQkADU5ZTMzMWNjLTExYjEtNDA2OC1hOTM1LWFkNmVmMmU0OTg1NgAQAAor3LWwV4ZKlXDWq6TUXRI%3D?ui=en-US&rs=US" target="_blank" rel="noopener">
-            Mail
-        </a>
+<div class="dropdown-content">
 
-        <a class="link-box" href="https://outlook.cloud.microsoft/calendar/view/workweek?ui=en-US&rs=US" target="_blank" rel="noopener">
-            Calendar
-        </a>
 
-    </div>
+<a class="link-box" href="https://app.gohighlevel.com/v2/location/YeOwd8tycK9E6iuyQOTb/tasks" target="_blank" rel="noopener">
+Tasks
+</a>
+
+
+<a class="link-box" href="https://app.gohighlevel.com/v2/location/YeOwd8tycK9E6iuyQOTb/opportunities/list" target="_blank" rel="noopener">
+Pipelines
+</a>
+
+
+<a class="link-box" href="https://app.gohighlevel.com/v2/location/YeOwd8tycK9E6iuyQOTb/custom-menu-link/a9ad3832-80a7-4b56-88df-7303482419f4" target="_blank" rel="noopener">
+Carrier Contacts
+</a>
+
+
+</div>
 
 </div>
 
-    <a class="link-box" href="#">
-        Meridian Link
-    </a>
 
-    <a class="link-box" href="#">
-        Placeholder
-    </a>
 
-    <a class="link-box" href="#">
-        Placeholder
-    </a>
+<!-- EZ Lynx -->
+
+<div class="dropdown">
+
+<button type="button" class="link-box dropdown-btn">
+EZ Lynx ▼
+</button>
+
+
+<div class="dropdown-content">
+
+
+<a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+Book
+</a>
+
+
+<a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+Link 2
+</a>
+
+
+<a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+Link 3
+</a>
+
 
 </div>
+
+</div>
+
+
+
+<!-- Outlook -->
+
+<div class="dropdown">
+
+<button type="button" class="link-box dropdown-btn">
+Outlook ▼
+</button>
+
+
+<div class="dropdown-content">
+
+
+<a class="link-box" href="https://outlook.office.com/mail/inbox" target="_blank" rel="noopener">
+Mail
+</a>
+
+
+<a class="link-box" href="https://outlook.cloud.microsoft/calendar/?ui=en-US&rs=US" target="_blank" rel="noopener">
+Calendar
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- Regular Links -->
+
+<a class="link-box" href="https://secure.mortgage.meridianlink.com" target="_blank" rel="noopener">
+Meridian Link
+</a>
+
+
+<a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+Placeholder
+</a>
+
+
+<a class="link-box" href="https://google.com" target="_blank" rel="noopener">
+Placeholder
+</a>
+
+
+
+</div>
+
 
 <!-- ========================================= -->
 <!--              NAVBAR END                   -->
 <!-- ========================================= -->
 
 
-<!-- ========================================= -->
-<!--            PAGE CONTENT START             -->
-<!-- ========================================= -->
 
-<!-- Future widgets go here -->
-
-<!-- ========================================= -->
-<!--             PAGE CONTENT END              -->
-<!-- ========================================= -->
 
 
 <!-- ========================================= -->
 <!--          JAVASCRIPT START                 -->
 <!-- ========================================= -->
 
+
 <script>
+
 
 const dropdownButtons = document.querySelectorAll(".dropdown-btn");
 
+
 dropdownButtons.forEach(button => {
+
 
     button.addEventListener("click", function(event){
 
+
         event.stopPropagation();
 
-        // Close all other dropdowns
+
         document.querySelectorAll(".dropdown-content").forEach(menu => {
 
+
             if(menu !== this.nextElementSibling){
+
                 menu.classList.remove("show");
+
             }
+
 
         });
 
-        // Toggle current dropdown
+
         this.nextElementSibling.classList.toggle("show");
+
 
     });
 
+
 });
 
-// Click anywhere else closes every menu
+
 
 document.addEventListener("click", function(){
+
 
     document.querySelectorAll(".dropdown-content").forEach(menu => {
 
@@ -201,13 +311,17 @@ document.addEventListener("click", function(){
 
     });
 
+
 });
 
+
 </script>
+
 
 <!-- ========================================= -->
 <!--           JAVASCRIPT END                  -->
 <!-- ========================================= -->
+
 
 </body>
 
